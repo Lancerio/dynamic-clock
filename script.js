@@ -15,8 +15,10 @@ const showTime = () => {
     if (hour > 12) {
         hour = hour % 12;
         meridian = 'PM';
-    } else {
+    } else if (hour === 0) {
         hour = 12;
+        meridian = 'AM';
+    } else {
         meridian = 'AM';
     }
 
@@ -41,7 +43,7 @@ const changeBG = () => {
         hour = today.getHours();
 
     if (hour < 12) {
-        document.body.style.backgroundImage = "url('../img/morning.jpg')";
+        document.body.style.backgroundImage = "url('./img/morning.jpg')";
         greeting.innerHTML = 'Good Morning,';
     } else if (hour < 18) {
         document.body.style.backgroundImage = "url('../img/afternoon.jpg')";
