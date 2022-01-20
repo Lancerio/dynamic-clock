@@ -12,7 +12,7 @@ const showTime = () => {
         sec = today.getSeconds();
 
     // Show AM PM
-    if (hour > 12) {
+   if (hour > 12) {
         hour = hour % 12;
         meridian = 'PM';
     } else if (hour === 0) {
