@@ -13,9 +13,10 @@ const showTime = () => {
 
     // Show AM PM
     if (hour > 12) {
-        hour = hour % 12 || 12;
+        hour = hour % 12;
         meridian = 'PM';
     } else {
+        hour = 12;
         meridian = 'AM';
     }
 
